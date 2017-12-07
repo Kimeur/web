@@ -39,7 +39,6 @@ public class EmployeeController {
 			
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated cat	ch block
-			e.printStackTrace();
 		}
 
     	model.addAttribute("employee", employee);

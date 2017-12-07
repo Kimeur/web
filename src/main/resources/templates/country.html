@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Country</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+	"yo"
+	
+	<div >
+    <h1>Countries</h1>
+    
+    <table  style="width:50%;">
+  <tr>
+    <th>CountryId</th>
+    <th>Name</th> 
+    <th>Region</th>
+    <th> </th>
+  </tr>
+  <tr th:each="p : ${country}">
+    <td th:text="${p.countryId}"></td>
+    <td th:text="${p.countryName}">  </td>
+    <td th:text="${p.region.regionName}"> </td>
+    <td>
+    	<button>Update</button>
+    </td>
+  </tr>
+  
+</table>
+    
+	</div>
+</body>
+</html>

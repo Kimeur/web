@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../style/employee.css" th:href="@{/style/employee.css}" />
+<link type="text/css" href="./employee.css" rel="stylesheet" />
+<title>Employee</title>
+
+<script type="text/javascript" src="../../javascript/employee.js"
+	th:src="@{/javascript/employee.js}"></script>
+</head>
+<body>
+	"yo"
+
+	<div>
+		<h1>Employees</h1>
+		
+		 <button th:onclick="'getEmployee(\'' + ${employeeJson} +'\');'">Update</button>
+		<table style="width: 50%;">
+			<tr>
+				<th>Id</th>
+				<th>Employee Job</th>
+				<th>Salary</th>
+				<th></th>
+			</tr>
+			<tr th:each="p : ${employee}">
+			
+			
+				<td th:text="${p.employeeId}"></td>
+				<td th:text="${p.job.jobTitle}"></td>
+				<td th:text="${p.salary}"></td>
+				<td>
+					<button th:onclick="'ffd(\'' + ${p.job.jobTitle} +'\');'">Update</button>
+				</td>
+			</tr>
+
+		</table>
+
+		<canvas id="myChart"></canvas>
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</body>
+</html>

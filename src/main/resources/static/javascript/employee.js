@@ -1,4 +1,5 @@
 console.log("kkd");
+console.log(tab);
 window.onload = function() {
 	var ctx = document.getElementById('myChart').getContext('2d');
 	
@@ -22,6 +23,7 @@ window.onload = function() {
 	});
 
 	};
+
 
 function ffd(a){
 	console.log(a)
